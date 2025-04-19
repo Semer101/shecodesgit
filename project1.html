@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detective Conan</title>
+    <style>
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px 20px 30px;
+            border-radius: 30px;
+            background: linear-gradient(45deg, #e20909, #220202);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: white;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        h1 {
+            text-align: center; 
+            font-family: fantasy;
+        }
+        h2 {
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+        ul li {
+           padding: 10px 0px;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 50%;
+            border-radius: 50%;
+            border:black solid 2px;
+            padding: 2px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+        }
+        p {
+            text-align: center;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        button {
+            display: block;
+            margin: 0 auto;
+            margin-top:15px;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 5px;
+            background: black;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+        }
+        button:hover {
+            opacity:0.7;
+            background: white;
+            color:black;
+            transition: all 0.3s ease-in-out;
+        }
+        .newsletter {
+            text-align:center;
+            font-size: 16px;
+            font-style: italic;
+            border: rgba(0, 0, 0, 0.6) solid 2px;
+            width: 60%;
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+        }
+        span {
+            font-weight: bold;
+            font-style: normal;
+            color:rgb(159, 172, 172);
+        }
+        a {
+            text-decoration: none;
+            color:white;
+            cursor:pointer;
+            font-weight: 600;
+        }
+        a:hover {
+            text-decoration: underline;
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Case Closed</h1>
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/158/021/original/conan.jfif?1739833605" alt="Case closed poster">
+        <p><strong>Case Closed,</strong> also known as <strong>Detective Conan,</strong> is a captivating Japanese anime and manga series created by Gosho Aoyama. 
+            The story follows Shinichi Kudo, a brilliant high school detective who is transformed into a child after ingesting a mysterious poison. 
+            Under the alias Conan Edogawa, he continues to solve intricate cases while concealing his true identity from those around him. 
+            The series masterfully combines elements of <em>mystery, suspense, and drama,</em> keeping viewers on the edge of their seats with its clever plot twists and compelling character arcs. 
+            With over a thousand episodes and numerous movies, 
+            <strong>Case Closed</strong> has garnered a dedicated fanbase worldwide and remains a beloved classic in the detective genre. 🕵️‍♂️🔍
+            <br>
+            <a href="https://myanimelist.net/anime/235/Meitantei_Conan" target="_blank">Learn more here.</a>
+        </p>
+            
+        <hr>
+        <h2>Main characters:</h2>
+        <ul>
+            <li>Shinichi Kudo / Conan Edogawa</li>
+            <li>Ran Mouri</li>
+            <li>Kogoro Mouri</li>
+            <li>Ai Haibara</li>
+            <li>Heiji Hattori</li>
+            <li>Kaito Kuroba / Kaito Kid</li>
+            <li>Sonoko Suzuki</li>
+            <li>Professor Hiroshi Agasa</li>
+        </ul>
+        <p class="newsletter">Unlock the mysteries of Case Closed and dive into thrilling detective adventures with our <span>weekly newsletter!</span> Subscribe now to join a community of fans and get insights, exclusive content, and more!</p>
+        <button>Subscribe</button>
+    </div>
+    <script>
+        function subscribe() {
+            let name = prompt("Please enter your name to subscribe to our newsletter:");
+            let email = prompt("Please enter your email address to subscribe to our newsletter:");
+            let h1 = document.querySelector("h1");
+            if (name === null || name === "" || email === null || email === "") {
+                alert("Please enter your name and email to subscribe to our newsletter!");
+            } else {
+                h1.innerHTML = `Thank you ${name} for subscribing to our newsletter! 💌<br> We will get back to you shortly!`;
+            h1.style.fontFamily = "sans-serif";
+            }
+        }
+        let button = document.querySelector("button")
+        button.addEventListener("click", subscribe);
+    </script>
+</body>
+</html>
